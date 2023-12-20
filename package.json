@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "embla-carousel-autoplay": "^8.0.0-rc15",
     "embla-carousel-react": "^8.0.0-rc15",
     "next": "14.0.4",
     "react": "^18",
