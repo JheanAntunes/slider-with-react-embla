@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components {
+  .embla {
+    @apply overflow-hidden
+  }
+  .embla__container {
+    @apply flex
+    
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    @apply flex-shrink-0 flex-grow
+  }
+}
+
