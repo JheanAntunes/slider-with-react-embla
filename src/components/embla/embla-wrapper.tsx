@@ -1,18 +1,19 @@
-"use client"
-import React from 'react'
+'use client'
 import useEmblaCarousel from 'embla-carousel-react'
-function EmblaWrapper({children, ...restProps}:React.ComponentProps<"div">) {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true})
-    
-    React.useEffect(() => {
-        if (emblaApi) {
-          console.log(emblaApi.slideNodes()) // Access API
-        }
-      }, [emblaApi])
-  
+import React from 'react'
+function EmblaWrapper({ children, ...restProps }: React.ComponentProps<'div'>) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
-    return (
-    <div className="embla" ref={emblaRef}>{children}</div>
+  React.useEffect(() => {
+    if (emblaApi) {
+      console.log(emblaApi.slideNodes()) // Access API
+    }
+  }, [emblaApi])
+
+  return (
+    <div className="embla" ref={emblaRef} {...restProps}>
+      {children}
+    </div>
   )
 }
 
