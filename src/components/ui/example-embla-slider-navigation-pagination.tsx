@@ -1,6 +1,7 @@
 'use client'
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
+import TypographyH1 from '../typography'
 import GenerateEmblaSliders from '../utils/generateEmblaSliders'
 import {
   DotButton,
@@ -49,7 +50,8 @@ const ExampleEmblaSliderNavigationPagination = () => {
   }, [emblaApi, onInit, onSelect])
 
   return (
-    <>
+    <div className="flex flex-col gap-8">
+      <TypographyH1>Slider com navigation e pagination</TypographyH1>
       <div className="embla relative">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
@@ -75,7 +77,7 @@ const ExampleEmblaSliderNavigationPagination = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
