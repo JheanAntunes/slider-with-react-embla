@@ -1,6 +1,4 @@
 'use client'
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
-import { useCallback, useEffect, useState } from 'react'
 import TypographyH1 from '../typography'
 import GenerateEmblaSliders from '../utils/generateEmblaSliders'
 import {
@@ -8,46 +6,19 @@ import {
   NextButton,
   PrevButton,
 } from './embla-carrousel-arrows-buttons-dots'
+import { useEmblaSliderPaginationNavigation } from './useEmblaSliderPaginationNavigation'
 
 const ExampleEmblaSliderNavigationPagination = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel()
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
-
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi],
-  )
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi],
-  )
-  const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi],
-  )
-
-  const onInit = useCallback((emblaApi: EmblaCarouselType) => {
-    setScrollSnaps(emblaApi.scrollSnapList())
-  }, [])
-
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-    setPrevBtnDisabled(!emblaApi.canScrollPrev())
-    setNextBtnDisabled(!emblaApi.canScrollNext())
-  }, [])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    onInit(emblaApi)
-    onSelect(emblaApi)
-    emblaApi.on('reInit', onInit)
-    emblaApi.on('reInit', onSelect)
-    emblaApi.on('select', onSelect)
-  }, [emblaApi, onInit, onSelect])
+  const {
+    emblaRef,
+    nextBtnDisabled,
+    prevBtnDisabled,
+    scrollNext,
+    scrollPrev,
+    scrollSnaps,
+    scrollTo,
+    selectedIndex,
+  } = useEmblaSliderPaginationNavigation()
 
   return (
     <div className="flex flex-col gap-8">
