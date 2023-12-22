@@ -1,5 +1,11 @@
+import MainTravelin from '@/components/travelin/layout/main/main-travelin'
+
 function TravelinHomePage() {
-  return <div>TravelinHomePage</div>
+  return (
+    <>
+      <MainTravelin />
+    </>
+  )
 }
 
 export default TravelinHomePage
