@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useNavigation } from './useNavigation'
 
 export const useEmblaSliderPaginationNavigation = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel()
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
   const {
