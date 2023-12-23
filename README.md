@@ -1,7 +1,7 @@
 # Introdução 🤓
-Biblioteca: Embla 🧰
+Biblioteca: [Embla ](https://www.embla-carousel.com) 🧰
 
-Pratica hospedado na vercel PraticaEmbla 🔗
+Pratica hospedado na vercel [PraticaEmbla](slider-with-react-embla.vercel.app) 🔗
 
 ## Embla 😍
 - Não é uma biblioteca que está parada. 👀
