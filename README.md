@@ -1,3 +1,27 @@
+# Introdução 🤓
+Biblioteca: Embla 🧰
+
+Pratica hospedado na vercel PraticaEmbla 🔗
+
+## Embla 😍
+- Não é uma biblioteca que está parada. 👀
+- Não tem problemas de types 👂
+- Não está em mudanças de versões 👍
+- Documentação com exemplos (Js, React, ReacTS) 😎
+- Controle no slider (criação do html, estilização, funcionalidades) 😲
+- Generate Slider (Inteligência artificial para gerar slider na embla) 🤯
+### É desvatagens 💀 ou não 😕 ?
+Slider semantic : O dev que constrói o html (esqueleto do slider) precisa adicionar as arias para acessibilidade ♿
+
+## Pratica 🤓
+- Criação de slider básico 😲
+- Criação de slider com plugins (autoPlay) 😲
+- Criação de slider com navigation (a embla fornece a funcionalidade e dev implementa.) 😲
+- Criação de slider com navigation e pagination (a embla fornece a funcionalidade e dev implementa.) 😲
+> a leitura sobre a documentação, api, events, options ... 😲 extra: padrão de commits 📚 e ...
+## Dificuldades 💀
+Não conseguia compreender os exemplos mais avançado (slider com pagination e navigation), até pensei em desistir, mas voltei na documentação comecei a ler para exclarecer sobre as minhas dúvidas e consegui 😲
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
